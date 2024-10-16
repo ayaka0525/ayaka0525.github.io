@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap'); 
+/* Google Fontsから"Roboto Mono"フォントをインポート */
+
+* {
+    margin: 0; /* 全ての要素の外側の余白をリセット */
+    padding: 0; /* 全ての要素の内側の余白をリセット */
+    box-sizing: border-box; /* 幅や高さを決めるときに、paddingやborderも含めて計算 */
+    font-family: "Roboto Mono", monospace; /* 全ての要素に"Roboto Mono"フォントを適用 */
+    font-optical-sizing: auto; /* フォントの光学サイズ調整を自動に設定 */
+    font-style: normal; /* フォントを標準スタイルに設定（斜体ではなく） */
+}
+
+body {
+    display: flex; /* 子要素をフレックスボックスレイアウトに */
+    align-items: center; /* 縦方向で中央に子要素を配置 */
+    justify-content: center; /* 横方向で中央に子要素を配置 */
+    min-height: 100vh; /* ビューポートの高さの100%を最小の高さに設定 */
+    background-color: rgb(89,155,231); /* 背景色を青に設定 */
+    position: relative; /* 絶対位置の要素を基準とするために相対位置を設定 */
+    overflow: hidden; /* コンテンツがはみ出た場合にスクロールさせず隠す */
+}
+
+.container {
+    position: absolute; /* 親要素（body）に対して絶対位置 */
+    display: flex; /* フレックスボックスレイアウトに */
+    align-items: center; /* 縦方向で中央に配置 */
+    justify-content: center; /* 横方向で中央に配置 */
+    width: 100%; /* コンテナの幅を100%に設定 */
+    height: 100%; /* コンテナの高さを100%に設定 */
+}
+
+h2 {
+    color: #fff; /* テキストの色を白に */
+    font-size: 6rem; /* フォントサイズを非常に大きく（6rem = 約96px） */
+    text-align: center; /* テキストを中央に揃える */
+    position: relative; /* 相対位置で配置し、重なり順を調整 */
+    z-index: 1; /* 他の要素より前面に表示されるように（背景より上に） */
+}
+
+.block {
+    position: absolute; /* 親要素（container）に対して絶対位置 */
+    width: 100px; /* ブロックの幅を100pxに設定 */
+    height: 100px; /* ブロックの高さを100pxに設定 */
+    border-radius: 50%; /* 丸い形にするために角を50%丸める */
+    background-color: #53f496; /* ブロックの背景色を薄い緑に設定 */
+    box-shadow: 5px 5px 20px rgba(147, 168, 157, 0.204); /* ブロックに影を付けて立体感を演出 */
+}
