@@ -89,7 +89,8 @@ section {
 @media only screen and (max-width: 980px) {
     .hero {
         width: 100%;
-        background-attachment: scroll; /* モバイルでの固定背景問題を回避 */
+        background-image: url(./img/main-500.png); /* モバイルでの固定背景問題を回避 */
+        /* background-size: cover; */
     }
 }
 
