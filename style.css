@@ -1,0 +1,248 @@
+:root {
+  --bg: #fdecef;
+  --card: #fadcd9;
+  --accent: #f8afa6;
+  --text: #262225;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Sora", "Noto Sans JP", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ====== 全体レイアウト ====== */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 左：作品一覧、右：プロフィール */
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 2rem auto 4rem;
+  padding: 0 2rem;
+}
+
+/* ====== 上部ナビ／タイトル ====== */
+.main-content-top {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  background: var(--card);
+  height: 80px;
+  padding: 0.5rem 3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 18px;
+}
+
+.main-content-top h1 {
+  color: var(--text);
+  font-weight: 400;
+}
+
+.main-content-top nav a {
+  margin-left: 2rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+.main-content-top nav a:hover {
+  color: var(--accent);
+}
+
+/* ====== 左：メインコンテンツ ====== */
+/* .main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 20px;
+} */
+
+.main-content {
+  display: flex;
+  flex-direction: column; /* 縦方向に並べる */
+  gap: 1.5rem; /* カード間のスペース */
+  margin-top: 80px; /* 固定ヘッダーの高さ分 */
+}
+
+.work-card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.work-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.work-card h3 {
+  color: var(--accent);
+  margin-top: 0;
+  font-weight: 600;
+}
+
+/* クラウドアイコン用のじゅわっとフェードイン */
+.portfolio-container h1,
+.portfolio-container h2,
+.portfolio-container h3,
+.portfolio-container p,
+.portfolio-container a {
+  opacity: 0;
+  display: inline-block;
+  /* color: var(--accent); */
+  animation: cloudJuwaIn 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* opacity と blur のみでじゅわっと */
+@keyframes cloudJuwaIn {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.work-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.btn-outline-pink {
+  display: inline-block;
+  margin-top: 1rem;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+/* ホバー時に斜めグラデーション */
+.btn-outline-pink:hover {
+  background: linear-gradient(120deg, #a9d998, #faff93); /* 緑→黄色 */
+  border-color: #a9d998; /* 境界線もグラデ寄りの色に変える */
+  color: #fff; /* 文字は白のまま */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* optional: 立体感 */
+}
+
+/* ====== 右：プロフィールカード ====== */
+.sidebar {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  position: sticky;
+  top: 110px;
+  align-self: start;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+.sidebar img {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.sidebar h2 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.sidebar p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.sidebar hr {
+  border: none;
+  border-top: 2px solid var(--accent);
+  margin: 1rem 1rem;
+}
+.social a {
+  color: var(--accent);
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+.social a:hover {
+  color: #b24e7e;
+}
+
+/* ====== Contact部分（下段） ====== */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+footer button {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* アイコンプロフィール */
+.icon-profile {
+  width: 140px;
+  height: 140px;
+  border-radius: 10%;
+  background: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem auto;
+  position: relative;
+}
+.icon-profile i {
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* レスポンシブ */
+@media (max-width: 1024px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+    max-width: 92%;
+  }
+  .main-content-top {
+    max-width: 92%;
+  }
+}
+
+/* ====== My Portfolio アニメーション ====== */
+.main-content-top h1 {
+  color: var(--text); /* 文字色そのまま */
+  font-weight: 400;
+  font-size: 2rem;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideFadeIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* 上からスライドフェードイン */
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
