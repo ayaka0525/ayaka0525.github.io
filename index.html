@@ -1,116 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Practice Work Lists</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Ayaka Wada Portfolio</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
     />
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <h1>My Practice Work Lists</h1>
-    <ul>
-      <li class="list-unstyled">
-        <a
-          href="./bootstrap5/index.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          >bootstrap5</a
-        >
+    <header class="main-content-top">
+      <h1 class="mb-1">My<strong>Portfolio</strong></h1>
+    </header>
 
-        <p><strong>企業のHPページを想定したサイト作り</strong></p>
-        <p>
-          ・<code>navbar</code>を用いて固定ヘッダーを作成し、ページ内リンクで各セクションへ移動。
-        </p>
-        <p>
-          ・<code>card</code>コンポーネントでサービス・プロジェクト・ブログ紹介を整理。
-        </p>
-        <p>
-          ・<strong>Boxicons</strong>を使い、アイコンで視覚的にわかりやすく表現。
-        </p>
-        <p>
-          ・<code>col-sm-6</code>や<code>col-lg-4</code>でレスポンシブ対応を最適化。
-        </p>
-      </li>
-      <li class="list-unstyled">
-        <a
-          href="./response-practice/index.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          >response-practice</a
-        >
-        <p>
-          <strong
-            >静的LP（ランディングページ）をHTML＋CSSのみで構築する練習</strong
+    <div class="portfolio-container">
+      <main class="main-content">
+        <div class="work-card">
+          <h3>
+            <span class="fade-text"
+              ><i class="fa-solid fa-cloud"></i>Corporate Website
+              (Bootstrap5)</span
+            >
+          </h3>
+          <p>
+            企業HPを想定して作成。ナビゲーションバー・カードレイアウト・レスポンシブ対応を重視。
+          </p>
+          <a
+            href="./bootstrap5/index.html"
+            target="_blank"
+            class="btn btn-outline-pink"
+            >Visit Site</a
           >
-        </p>
-        <p>・Bootstrap活用：colやrowを正確に使い、レスポンシブ対応。</p>
-        <p>
-          ・デザイン統一：見出し＋テキスト＋カード構成や<strong>Boxicons</strong>で、一貫した視覚デザインを実現。
-        </p>
-        <p>
-          ・構成：ナビバー → ヒーロー → サービス → プロジェクト → チーム →
-          ブログ → お問い合わせ → フッターで流れで作成。
-        </p>
-      </li>
-      <li class="list-unstyled">
-        <a href="./anime/" target="_blank" rel="noopener noreferrer">anime</a>
-        <p><strong>Anime.jsを使って作ったアニメーション</strong></p>
-        <p>
-          ・50個の小さなブロックが画面上でランダムに動き回り、サイズが変わるアニメーションです。
-        </p>
-      </li>
-      <li class="list-unstyled">
-        <a href="./image-gallery/" target="_blank" rel="noopener noreferrer"
-          >image-practice</a
-        >
-        <p><strong>画像ギャラリー</strong></p>
-        <p>
-          ・jQuery +
-          Lightbox2でクリック時の拡大表示・キャプション表示・ナビゲーションを実現。
-        </p>
-      </li>
+        </div>
 
-      <li>
-        <p><strong>APIを利用したサイト</strong></p>
-        <p>API を使用し React+Github でサイトの作成</p>
-        <a href="./pokemon" target="_blank" rel="noopener noreferrer"
-          >pokemon</a
-        >
-      </li>
-    </ul>
+        <div class="work-card">
+          <h3>
+            <span class="fade-text"
+              ><i class="fa-solid fa-cloud"></i>Responsive Landing Page</span
+            >
+          </h3>
+          <p>
+            HTML+CSSのみで構成したランディングページ。Boxiconsを使い、視覚的統一感を意識。
+          </p>
+          <a
+            href="./response-practice/index.html"
+            target="_blank"
+            class="btn btn-outline-pink"
+            >Visit Site</a
+          >
+        </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
+        <div class="work-card">
+          <h3>
+            <span class="fade-text"
+              ><i class="fa-solid fa-cloud"></i>Anime.js Animation</span
+            >
+          </h3>
+          <p>
+            50個の小ブロックが動き回るアニメーション。ランダム性と動きの滑らかさを重視。
+          </p>
+          <a href="./anime/" target="_blank" class="btn btn-outline-pink"
+            >View Animation</a
+          >
+        </div>
+
+        <div class="work-card">
+          <h3>
+            <span class="fade-text"
+              ><i class="fa-solid fa-cloud"></i>Image Gallery</span
+            >
+          </h3>
+          <p>
+            jQuery +
+            Lightbox2を使用したギャラリー。クリックで拡大・キャプション表示ができる。
+          </p>
+          <a
+            href="./image-gallery/"
+            target="_blank"
+            class="btn btn-outline-pink"
+            >View Gallery</a
+          >
+        </div>
+
+        <div class="work-card">
+          <h3>
+            <span class="fade-text"
+              ><i class="fa-solid fa-cloud"></i>React + API Project</span
+            >
+          </h3>
+          <p>
+            Reactを使ってAPIデータを取得し、GitHub
+            Pages上で動作するサイトを構築している。
+          </p>
+          <a href="./pokemon" target="_blank" class="btn btn-outline-pink"
+            >View Project</a
+          >
+        </div>
+      </main>
+
+      <aside class="sidebar rounded-4 p-3">
+        <div class="icon-profile">
+          <i class="fa-solid fa-mug-saucer"></i>
+        </div>
+
+        <h2>Kuroneko</h2>
+        <hr />
+        <p>
+          インフラ・Web領域を中心に学習をしています。<br />
+          人の助けになることに生きがいを感じます。
+        </p>
+      </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
